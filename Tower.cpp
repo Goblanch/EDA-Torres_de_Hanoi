@@ -31,7 +31,7 @@ bool Tower::isEmpty() const {
 }
 
 int Tower::size() const {
-    return disks.size();
+    return static_cast<int>(disks.size());
 }
 
 std::string Tower::getName() const {

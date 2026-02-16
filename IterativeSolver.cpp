@@ -9,7 +9,7 @@ void IterativeSolver::solve(Tower& source, Tower& auxiliary, Tower& destination,
     std::cout << "\n=== Solución Iterativa ===" << std::endl;
     std::cout << "Resolviendo Torres de Hanoi con " << numDisks << " discos...\n" << std::endl;
     
-    int totalMoves = std::pow(2, numDisks) - 1;
+    int totalMoves = static_cast<int>(std::pow(2, numDisks)) - 1;
     
     Tower* tower1;
     Tower* tower2;
