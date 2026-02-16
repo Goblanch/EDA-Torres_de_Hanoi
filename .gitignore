@@ -1,0 +1,13 @@
+# Compiled object files
+*.o
+*.obj
+
+# Executables
+hanoi
+*.exe
+*.out
+
+# Temporary files
+*~
+*.swp
+.DS_Store
