@@ -4,6 +4,9 @@
 Tower::Tower(const std::string& towerName) : name(towerName) {}
 
 void Tower::push(const Disk& disk) {
+    if (!isEmpty() && !disk.isSmallerThan(peek())) {
+        throw std::runtime_error("Cannot place larger disk on smaller disk");
+    }
     disks.push(disk);
 }
 

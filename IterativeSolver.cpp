@@ -1,5 +1,4 @@
 #include "IterativeSolver.h"
-#include <cmath>
 
 void IterativeSolver::moveBetweenTowers(Tower& t1, Tower& t2, std::vector<Move>& moves) {
     // If both towers are empty, nothing to do
@@ -38,7 +37,7 @@ std::vector<Move> IterativeSolver::solve(Tower& source, Tower& auxiliary, Tower&
     std::vector<Move> moves;
     
     // Total number of moves required
-    int totalMoves = std::pow(2, numDisks) - 1;
+    int totalMoves = (1 << numDisks) - 1;
     
     // For odd number of disks, the sequence is: source-destination, source-auxiliary, auxiliary-destination
     // For even number of disks, the sequence is: source-auxiliary, source-destination, auxiliary-destination
